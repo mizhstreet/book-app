@@ -12,7 +12,9 @@ class CategoryScreen extends StatelessWidget {
         ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         centerTitle: true,
       ),
@@ -163,28 +165,28 @@ class CategoryScreen extends StatelessWidget {
                   'Lisa Michael',
                   13.0,
                   'assets/bash_and_lucy-2.jpg',
-                  isHorizontal: false,
+                  isHorizontal: true,
                 ),
                 Book(
                   "Mesho",
                   'Lisa Michael',
                   13.0,
                   'assets/mesho.jpg',
-                  isHorizontal: false,
+                  isHorizontal: true,
                 ),
                 Book(
                   "The happy lemon",
                   'Lisa Michael',
                   13.0,
                   'assets/the_happy_lemon.jpg',
-                  isHorizontal: false,
+                  isHorizontal: true,
                 ),
                 Book(
                   "The littlest bird",
                   'Lisa Michael',
                   13.0,
                   'assets/the_littlest_bird.jpg',
-                  isHorizontal: false,
+                  isHorizontal: true,
                 ),
               ],
             ),

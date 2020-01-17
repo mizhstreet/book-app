@@ -17,85 +17,90 @@ class Book extends StatelessWidget {
             margin: EdgeInsets.symmetric(
               vertical: 10,
             ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Container(
-                  width: 115,
-                  margin: EdgeInsets.only(
-                    right: 14,
+            child: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, "product");
+              },
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Container(
+                    width: 115,
+                    margin: EdgeInsets.only(
+                      right: 14,
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(13),
+                      child: Image.asset(this.image),
+                    ),
                   ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(13),
-                    child: Image.asset(this.image),
-                  ),
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        this.name,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 20,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        SizedBox(
+                          height: 8,
                         ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        "by Lisa Michael",
-                        style: TextStyle(
-                          color: Colors.grey,
+                        Text(
+                          this.name,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 17,
-                      ),
-                      Text(
-                        "\$18",
-                        style: TextStyle(
-                          color: Colors.purple,
-                          fontSize: 20,
+                        SizedBox(
+                          height: 8,
                         ),
-                      ),
-                      SizedBox(
-                        height: 17,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Icon(
-                            Icons.star,
-                            color: Colors.yellow,
+                        Text(
+                          "by Lisa Michael",
+                          style: TextStyle(
+                            color: Colors.grey,
                           ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.yellow,
+                        ),
+                        SizedBox(
+                          height: 17,
+                        ),
+                        Text(
+                          "\$18",
+                          style: TextStyle(
+                            color: Colors.purple,
+                            fontSize: 20,
                           ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.yellow,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.yellow,
-                          ),
-                          Icon(
-                            Icons.star_half,
-                            color: Colors.yellow,
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                )
-              ],
+                        ),
+                        SizedBox(
+                          height: 17,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Icon(
+                              Icons.star,
+                              color: Colors.yellow,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.yellow,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.yellow,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.yellow,
+                            ),
+                            Icon(
+                              Icons.star_half,
+                              color: Colors.yellow,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           )
         : Container(
@@ -103,44 +108,49 @@ class Book extends StatelessWidget {
             margin: EdgeInsets.only(
               right: 15,
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(13),
-                  child: Image.asset(this.image),
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                Expanded(
-                  child: Text(
-                    this.name,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 2,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
+            child: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, "/product");
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(13),
+                    child: Image.asset(this.image),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Expanded(
+                    child: Text(
+                      this.name,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
-                ),
-                Text(
-                  this.author,
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    color: Colors.grey,
+                  Text(
+                    this.author,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.grey,
+                    ),
                   ),
-                ),
-                Text(
-                  "\$${this.price}",
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.purple,
+                  Text(
+                    "\$${this.price}",
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.purple,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           );
   }

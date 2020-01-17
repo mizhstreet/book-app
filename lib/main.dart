@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:book_app/screens/category_screen/category_screen.dart';
 import 'package:book_app/screens/product_screen/product_screen.dart';
 import 'package:book_app/screens/home_screen/home_screen.dart';
-import 'package:book_app/screens/cart_screen/cart_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -37,7 +36,9 @@ class MyApp extends StatelessWidget {
       title: 'Book lover',
       initialRoute: '/',
       routes: {
-        '/': (context) => CartScreen(),
+        '/': (context) => HomeScreen(),
+        '/product': (context) => ProductScreen(),
+        '/category': (context) => CategoryScreen()
       },
     );
   }
